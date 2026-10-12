@@ -22,7 +22,7 @@ local_game_stores: []
 #  - {name: "My LGS", url: "https://example-lgs.com.au/search?q={q}"}
 
 alerts:
-  release_reminder_days: [14, 7, 1]   # Telegram reminders before EN release / preorder open
+  release_reminder_days: [14, 7, 2, 1]   # Telegram reminders before EN release / preorder open
   min_landed_margin_pct: 25           # overseas offer alert threshold (after all fees)
 
 # Character popularity. Tier 1 moves product; tier 2 helps.

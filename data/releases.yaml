@@ -52,7 +52,7 @@ releases:
     jp_release: 2026-07-31
     jp_name: "Storm Emeralda"
     confirmed: true
-    chase: []          # fill once the EN chase list is known (check the JP Storm Emeralda SIRs)
+    chase: [Rayquaza]  # Mega Rayquaza headlines the set; add more as SIRs are revealed
     reprint_risk: medium
     ebay_query: "pokemon delta reign elite trainer box"
     source: "misprint.com late-2026 release schedule"

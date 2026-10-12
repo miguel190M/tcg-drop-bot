@@ -116,9 +116,10 @@ def score_release(release: dict, cfg: dict, preorder_market_aud: float | None = 
     elif verdict == "BUY" and est_profit is None and sig["jp_premium"] is None:
         verdict = "WATCH"   # never BUY on hype alone — needs a market price
         reasons.append("held at WATCH until eBay/JP price data confirms margin")
-    elif verdict == "PASS" and conf < 0.4:
-        verdict = "WATCH"   # unknown is not a pass — wait for chase list / prices
-        reasons.insert(0, "not enough data to call yet")
+    elif verdict == "PASS" and est_profit is None and sig["jp_premium"] is None:
+        verdict = "WATCH"   # no price data either way — don't PASS on hype signals alone
+        reasons.insert(0, "not enough data to call yet" if conf < 0.4 else
+                       "leaning PASS on hype signals — needs AU RRP / price data to confirm")
     elif verdict == "PASS":
         reasons.insert(0, "weak flip signals (set type/chase/premium)")
     elif conf < 0.6:

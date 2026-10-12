@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//tcg-drop-bot//EN
+X-WR-CALNAME:TCG Drops
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:327a60375651aaa1a42eb0d3e0a7c4d8c58437d6@tcg-drop-bot
+DTSTAMP:20261012T054744Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:🟡 [OP] Extra Booster: Heroines Edition Vol. 2 — EN release
+DESCRIPTION:FLIP verdict: WATCH  (flip 79 / hold 76\, confidence 40%)\n• strong chase: Nami\, Boa Hancock\, Nico Robin\n• held at WATCH until eBay/JP price data confirms margin\n• not a flip\, but a hold candidate (hold 76)\nChase: Nami\, Boa Hancock\, Nico Robin\, Yamato\, Uta\nSource: billsarchive.com/one-piece (TCGplayer catalogue)
+END:VEVENT
+BEGIN:VEVENT
+UID:db60e69c7001b3f0ce1406a92c4dc3af73f926f6@tcg-drop-bot
+DTSTAMP:20261012T054744Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:🟡 [OP] OP-18 — EN release
+DESCRIPTION:FLIP verdict: WATCH  (flip 42 / hold 53\, confidence 20%)\n• not enough data to call yet\nSource: Bandai official EN/JP product pages via samuraiswordtokyo.com
+END:VEVENT
+BEGIN:VEVENT
+UID:00e89d96db1652f51ff44085db7fec0f2335af90@tcg-drop-bot
+DTSTAMP:20261012T054744Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:🟡 [OP] OP-18 — JP release (watch prices)
+DESCRIPTION:FLIP verdict: WATCH  (flip 42 / hold 53\, confidence 20%)\n• not enough data to call yet\nSource: Bandai official EN/JP product pages via samuraiswordtokyo.com
+END:VEVENT
+BEGIN:VEVENT
+UID:ce0b905c995408ec1fafd385c992bc3858824c28@tcg-drop-bot
+DTSTAMP:20261012T054744Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:🟡 [PKM] Mega Evolution — Delta Reign — EN release
+DESCRIPTION:FLIP verdict: WATCH  (flip 42 / hold 45\, confidence 20%)\n• not enough data to call yet\nSource: misprint.com late-2026 release schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:7a34c67c27e205fd1fe8a782ef23c9fd3dc5f09d@tcg-drop-bot
+DTSTAMP:20261012T054744Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:🟡 [PKM] Aura Seeker (EN equivalent) — EN release (TBC)
+DESCRIPTION:FLIP verdict: WATCH  (flip 42 / hold 45\, confidence 20%)\n• not enough data to call yet\n• date unconfirmed\nSource: samuraiswordtokyo.com release calendar (unconfirmed)\n⚠ Date not confirmed
+END:VEVENT
+END:VCALENDAR

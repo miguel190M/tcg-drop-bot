@@ -1,0 +1,69 @@
+# Manual release list. This file always wins over auto-discovered data.
+# Add/edit entries here; the bot re-scores and re-syncs the calendar on every run.
+#
+# Fields
+#   id            unique slug
+#   game          pokemon | onepiece
+#   name, code    set name / set code
+#   set_type      main | special | extra | premium | anniversary
+#   en_release    English street date (YYYY-MM-DD). AU retail is usually same day.
+#   jp_release    Japanese date (leading indicator)
+#   preorder_open date preorders open at AU game stores (optional)
+#   confirmed     false = tentative date
+#   chase         headline characters on the chase cards (drives the score)
+#   reprint_risk  low | medium | high
+#   au_rrp        AUD RRP per product (optional, needed for premium + margin calcs)
+#   ebay_query    eBay search used for preorder/aftermarket price (optional)
+#   jp_box_rrp_jpy / jp_box_market_jpy   JP booster box RRP vs current market (optional)
+#   offers        overseas listings to run landed-cost checks on (optional)
+
+releases:
+  - id: op-eb05
+    game: onepiece
+    name: "Extra Booster: Heroines Edition Vol. 2"
+    code: EB-05
+    set_type: extra
+    en_release: 2026-10-30
+    confirmed: true
+    chase: [Nami, Boa Hancock, Nico Robin, Yamato, Uta]
+    reprint_risk: medium
+    ebay_query: "one piece EB-05 heroines booster box english"
+    source: "billsarchive.com/one-piece (TCGplayer catalogue)"
+
+  - id: op-op18
+    game: onepiece
+    name: "OP-18"
+    code: OP-18
+    set_type: main
+    en_release: 2026-11-20
+    jp_release: 2026-11-21
+    confirmed: true
+    chase: []
+    reprint_risk: medium
+    ebay_query: "one piece OP-18 booster box english"
+    source: "Bandai official EN/JP product pages via samuraiswordtokyo.com"
+
+  - id: pkm-delta-reign
+    game: pokemon
+    name: "Mega Evolution — Delta Reign"
+    code: ME06
+    set_type: main
+    en_release: 2026-11-06
+    jp_release: 2026-07-31
+    jp_name: "Storm Emeralda"
+    confirmed: true
+    chase: []          # fill once the EN chase list is known (check the JP Storm Emeralda SIRs)
+    reprint_risk: medium
+    ebay_query: "pokemon delta reign elite trainer box"
+    source: "misprint.com late-2026 release schedule"
+
+  - id: pkm-aura-seeker-en
+    game: pokemon
+    name: "Aura Seeker (EN equivalent)"
+    code: ""
+    set_type: main
+    en_release: 2027-02-01
+    confirmed: false   # floated for early 2027, not announced
+    chase: []
+    reprint_risk: medium
+    source: "samuraiswordtokyo.com release calendar (unconfirmed)"

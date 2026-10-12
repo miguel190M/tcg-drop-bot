@@ -1,0 +1,57 @@
+# Tunables. Secrets go in environment variables / GitHub Actions secrets, never here.
+
+timezone: Australia/Sydney
+
+tiers:            # on the FLIP score (0-100)
+  buy: 70
+  watch: 45
+
+flip:
+  min_profit_pct: 20   # below this (after eBay fees + postage, buying at RRP) it's a PASS
+
+# AU retail search links added to BUY/WATCH alerts. {q} = URL-encoded search.
+# These are the sites' search URL formats as of Oct 2026 — fix here if a link breaks.
+where_to_buy:
+  - {name: "Big W",     url: "https://www.bigw.com.au/search?text={q}"}
+  - {name: "Kmart",     url: "https://www.kmart.com.au/search/?searchTerm={q}"}
+  - {name: "Target",    url: "https://www.target.com.au/search?text={q}"}
+  - {name: "EB Games",  url: "https://www.ebgames.com.au/search?q={q}"}
+  - {name: "JB Hi-Fi",  url: "https://www.jbhifi.com.au/search?query={q}"}
+# Your local game stores (best for preorders). Add as many as you like:
+local_game_stores: []
+#  - {name: "My LGS", url: "https://example-lgs.com.au/search?q={q}"}
+
+alerts:
+  release_reminder_days: [14, 7, 1]   # Telegram reminders before EN release / preorder open
+  min_landed_margin_pct: 25           # overseas offer alert threshold (after all fees)
+
+# Character popularity. Tier 1 moves product; tier 2 helps.
+chase_tiers:
+  pokemon:
+    tier1: [Charizard, Pikachu, Umbreon, Eevee, Mew, Mewtwo, Gengar, Rayquaza, Lugia, Sylveon, Espeon]
+    tier2: [Gardevoir, Dragonite, Greninja, Lucario, Snorlax, Vaporeon, Jolteon, Flareon, Leafeon, Glaceon, Mimikyu, Giratina, Arceus]
+  onepiece:
+    tier1: [Luffy, Shanks, Zoro, Nami, Ace, Yamato, Boa Hancock, Uta]
+    tier2: [Law, Nico Robin, Sanji, Kid, Mihawk, Whitebeard, Kaido, Sabo, Perona, Vivi]
+
+set_type_weight:      # 0-1, how much the product type alone suggests demand
+  anniversary: 1.0
+  special: 0.9
+  premium: 0.8
+  extra: 0.6
+  main: 0.4
+
+game_hold_bonus:      # One Piece boxes have historically held better than Pokémon main sets
+  onepiece: 0.1
+  pokemon: 0.0
+
+landed_cost:
+  ebay_fee_pct: 13.4          # eBay AU final value fee incl. payment processing (check your category)
+  au_postage_out: 12.0        # your cost to post the item to the buyer
+  gst_pct: 10
+  low_value_threshold_aud: 1000   # under this, overseas sellers collect GST at checkout
+  import_processing_fee_aud: 100  # rough customs/broker cost above the threshold — check current ABF charges
+  default_forwarder_fee:          # per order, AUD, if an offer doesn't specify one
+    US: 45
+    JP: 35
+    UK: 40

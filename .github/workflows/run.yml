@@ -1,0 +1,46 @@
+name: tcg-drop-bot
+
+on:
+  schedule:
+    - cron: "47 20 * * *"   # 07:47 Sydney during AEDT (06:47 in AEST) — daily
+  workflow_dispatch:
+    inputs:
+      digest:
+        description: "Send weekly digest now"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tcg-drop-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
+          POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
+        run: python -m bot.main ${{ inputs.digest && '--digest' || '' }}
+      - name: Commit state + ICS
+        run: |
+          git config user.name "tcg-drop-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/state.json data/outcomes.json data/releases.ics
+          git diff --cached --quiet || git commit -m "bot: state update $(date -u +%F)"
+          git push

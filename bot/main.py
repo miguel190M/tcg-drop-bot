@@ -186,8 +186,9 @@ def run(offline: bool = False, force_digest: bool = False) -> None:
             px = f" · est A${s.est_profit:.0f}/unit" if s.est_profit is not None else ""
             tbc = " (TBC)" if not r.get("confirmed", True) else ""
             why = f"\n   ↳ {h(s.reasons[0])}" if s.tier == "PASS" and s.reasons else ""
+            where = f"\n   🛒 {where_to_buy(r, cfg)}" if s.tier != "PASS" else ""
             lines.append(f"{em} <b>{s.tier}</b> {h(r['name'])} [{calendar_sync.GAME[r['game']]}] — "
-                         f"{r['en_release']:%d %b}{tbc} · flip {s.flip}{px}{why}")
+                         f"{r['en_release']:%d %b}{tbc} · flip {s.flip}{px}{why}{where}")
         if len(lines) == 1:
             lines.append("Nothing dated in the next 90 days.")
         telegram.send("\n".join(lines))

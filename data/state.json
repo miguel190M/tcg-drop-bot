@@ -5,18 +5,18 @@
       "en_release": "2026-10-30",
       "flip": 79,
       "hold": 76,
-      "market_aud": 499.99,
+      "market_aud": 499.0,
       "tier": "WATCH",
-      "updated": "2026-11-01"
+      "updated": "2026-11-02"
     },
     "op-op18": {
       "combined": 42,
       "en_release": "2026-11-20",
       "flip": 42,
       "hold": 53,
-      "market_aud": 468.25,
+      "market_aud": 453.25,
       "tier": "WATCH",
-      "updated": "2026-11-01"
+      "updated": "2026-11-02"
     },
     "pkm-aura-seeker-en": {
       "combined": 42,
@@ -25,7 +25,7 @@
       "hold": 45,
       "market_aud": null,
       "tier": "WATCH",
-      "updated": "2026-11-01"
+      "updated": "2026-11-02"
     },
     "pkm-delta-reign": {
       "combined": 41,
@@ -34,7 +34,7 @@
       "hold": 43,
       "market_aud": 165.0,
       "tier": "WATCH",
-      "updated": "2026-11-01"
+      "updated": "2026-11-02"
     }
   }
 }

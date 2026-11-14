@@ -5,9 +5,9 @@
       "en_release": "2026-10-30",
       "flip": 79,
       "hold": 76,
-      "market_aud": 479.99,
+      "market_aud": 477.7,
       "tier": "WATCH",
-      "updated": "2026-11-13"
+      "updated": "2026-11-14"
     },
     "op-eb06": {
       "combined": 57,
@@ -16,16 +16,16 @@
       "hold": 63,
       "market_aud": null,
       "tier": "WATCH",
-      "updated": "2026-11-13"
+      "updated": "2026-11-14"
     },
     "op-op18": {
       "combined": 42,
       "en_release": "2026-11-20",
       "flip": 42,
       "hold": 53,
-      "market_aud": 424.7,
+      "market_aud": 374.485,
       "tier": "WATCH",
-      "updated": "2026-11-13"
+      "updated": "2026-11-14"
     },
     "op-op19": {
       "combined": 42,
@@ -34,7 +34,7 @@
       "hold": 53,
       "market_aud": null,
       "tier": "WATCH",
-      "updated": "2026-11-13"
+      "updated": "2026-11-14"
     },
     "pkm-aura-seeker-en": {
       "combined": 42,
@@ -43,16 +43,16 @@
       "hold": 45,
       "market_aud": null,
       "tier": "WATCH",
-      "updated": "2026-11-13"
+      "updated": "2026-11-14"
     },
     "pkm-delta-reign": {
       "combined": 41,
       "en_release": "2026-11-06",
       "flip": 41,
       "hold": 43,
-      "market_aud": 159.7,
+      "market_aud": 154.695,
       "tier": "WATCH",
-      "updated": "2026-11-13"
+      "updated": "2026-11-14"
     }
   }
 }
